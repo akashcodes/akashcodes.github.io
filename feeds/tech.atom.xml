@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>akash codes - tech</title><link href="https://akash.codes/" rel="alternate"></link><link href="https://akash.codes/feeds/tech.atom.xml" rel="self"></link><id>https://akash.codes/</id><updated>2019-05-28T00:00:00+05:30</updated><entry><title>Bookmarklets - Execute JS code from bookmarks</title><link href="https://akash.codes/bookmarklets.html" rel="alternate"></link><published>2019-05-28T00:00:00+05:30</published><updated>2019-05-28T00:00:00+05:30</updated><author><name>Akash Mishra</name></author><id>tag:akash.codes,2019-05-28:/bookmarklets.html</id><summary type="html">&lt;p&gt;Bookmarklets, and how to create one&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Psst... wanna execute JavaScript commands on your phone browser?&lt;/h1&gt;
+&lt;h2&gt;- Enter the bookmarklets -&lt;/h2&gt;
+&lt;h5&gt;&lt;em&gt;Please note that I'm gonnna use Google Chrome on Android for this article&lt;/em&gt;&lt;/h5&gt;
+&lt;p&gt;I've had my share of making web-apps and writing lots of JavaScript code. It has become a habit of mine to execute javascript snippets on many websites I visit, sometimes to hide those annoying popups that distract me from the main content, sometimes to automate some boring stuff, and most of the times just for fun.&lt;/p&gt;
+&lt;p&gt;You can use TamperMonkey, or just fire up the console but that only works on PC. There are moments I wish I could execute some of those commands while browsing on my Android phone. As of writing this article, Chrome on Android has no extensions, niether does it has a console on Android. Thankfully, there's a thing called Bookmarklets that does works.&lt;/p&gt;
+&lt;p&gt;If you're unaware - Bookmarklets are, just as their name says are bookmarks but they won't open a webpage. Instead, they execute some Javascript code when you open them. Sounds fun, right?&lt;/p&gt;
+&lt;p&gt;(might wanna add wikipedia definition. we'll see...)&lt;/p&gt;
+&lt;p&gt;When you bookmark a page, URI has a protocol specified with the bookmark (like http, or ftp). Now there'se on more protocol in the URI scheme that tells browsert it parse Javascript code. The &lt;strong&gt;&lt;em&gt;javascript:&lt;/em&gt;&lt;/strong&gt; protocol.&lt;/p&gt;
+&lt;p&gt;Normal bookmarks - https://example.com
+Javascript bookmark(let)s - javascript:function() {alert("Hello, world!");} ();&lt;/p&gt;
+&lt;h4&gt;Note to self: replace " " (space) with "%20% in the above example javascript bookmarklet.&lt;/h4&gt;
+&lt;p&gt;Okay, so how do I actually create a bookmarklet, and how it works?&lt;/p&gt;
+&lt;p&gt;To create a bookmarklet, simply create a bookmark, enter any recognizable unique name (we'll come to it soon), and in the bookmark URI, start with "javascript:", and then write your javascript code. Simple, ehh? Well, there are slight complications to it.&lt;/p&gt;
+&lt;p&gt;You need follow UTF-8 encoding while making your bookmark, replace spaces " " by %20%. You can save yourself from this kinda labour by simply using any bookmarklet editor available online.&lt;/p&gt;
+&lt;p&gt;Okay, let's create a simple bookmarklet. We'll create a bookmarklet that'll let us remove any page element when we click/tap on it.&lt;/p&gt;
+&lt;h2&gt;Create your sample bookmarklet now&lt;/h2&gt;
+&lt;h3&gt;Writing the Javascript&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;function() {&lt;/p&gt;
+&lt;p&gt;// This a function that&lt;/p&gt;
+&lt;p&gt;var el = document.createElement("div");&lt;/p&gt;
+&lt;p&gt;el.id= "dont-remove-me";&lt;/p&gt;
+&lt;p&gt;}();&lt;/p&gt;
+&lt;/blockquote&gt;</content><category term="web"></category><category term="javascript"></category><category term="programming"></category></entry></feed>

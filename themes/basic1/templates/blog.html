@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }}{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+<div class="article-link-cont">
+    {% for article in articles %}
+        <div class="article-link">
+            <a class="comment-count" href="/{{ article.slug }}.html#disqus_thread" disabled></a>
+            <h3 class="share-tech-font"><a href="/{{ article.slug }}.html">{{ article.title }}</a></h3>
+            <label>Posted on <strong>{{ article.date|strftime('%d %B %Y') }}</strong></label>
+            {{ article.summary }}
+        </div>
+    {% else %}
+    No posts yet!
+    {% endfor %}
+</div>
+{% endblock %}

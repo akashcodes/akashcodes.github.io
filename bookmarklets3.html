@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>akash codes</title>
+    <title> Bookmarklets 3 - Execute JS code from bookmarks </title>
     <link type="text/css" rel="stylesheet" href="/theme/css/base.css" />
 
     <!-- font-family: 'VT323' -->
@@ -66,18 +66,60 @@
                     &
                     <a class="nav-buttons nav-controls" href="/archives">Archives</a>
             </div>
-
-        </div>
+         </div>
         <div class="body">
-<div class="article-link-cont">
-    Posts with Tag: tag3
-        <div class="article-link">
-            <a class="comment-count" href="/bookmarklets.html#disqus_thread" disabled></a>
-            <h3 class="share-tech-font"><a href="/bookmarklets.html">Bookmarklets - Execute JS code from bookmarks</a></h3>
-            <label>Posted on <strong>28 May 2019</strong></label>
-            <p>Bookmarklets, and how to create one</p>
-        </div>
+<div class="row space-mono-font">
+    <div class="col-md-8">
+        <h1>Bookmarklets 3 - Execute JS code from bookmarks</h1>
+        <label>
+            Posted on <strong>28 May 2019</strong>
+        </label>
+        <h1>Psst... wanna execute JavaScript commands on your phone browser?</h1>
+<h2>- Enter the bookmarklets -</h2>
+<h5><em>Please note that I'm gonnna use Google Chrome on Android for this article</em></h5>
+<p>I've had my share of making web-apps and writing lots of JavaScript code. It has become a habit of mine to execute javascript snippets on many websites I visit, sometimes to hide those annoying popups that distract me from the main content, sometimes to automate some boring stuff, and most of the times just for fun.</p>
+<p>You can use TamperMonkey, or just fire up the console but that only works on PC. There are moments I wish I could execute some of those commands while browsing on my Android phone. As of writing this article, Chrome on Android has no extensions, niether does it has a console on Android. Thankfully, there's a thing called Bookmarklets that does works.</p>
+<p>If you're unaware - Bookmarklets are, just as their name says are bookmarks but they won't open a webpage. Instead, they execute some Javascript code when you open them. Sounds fun, right?</p>
+<p>(might wanna add wikipedia definition. we'll see...)</p>
+<p>When you bookmark a page, URI has a protocol specified with the bookmark (like http, or ftp). Now there'se on more protocol in the URI scheme that tells browsert it parse Javascript code. The <strong><em>javascript:</em></strong> protocol.</p>
+<p>Normal bookmarks - https://example.com
+Javascript bookmark(let)s - javascript:function() {alert("Hello, world!");} ();</p>
+<h4>Note to self: replace " " (space) with "%20% in the above example javascript bookmarklet.</h4>
+<p>Okay, so how do I actually create a bookmarklet, and how it works?</p>
+<p>To create a bookmarklet, simply create a bookmark, enter any recognizable unique name (we'll come to it soon), and in the bookmark URI, start with "javascript:", and then write your javascript code. Simple, ehh? Well, there are slight complications to it.</p>
+<p>You need follow UTF-8 encoding while making your bookmark, replace spaces " " by %20%. You can save yourself from this kinda labour by simply using any bookmarklet editor available online.</p>
+<p>Okay, let's create a simple bookmarklet. We'll create a bookmarklet that'll let us remove any page element when we click/tap on it.</p>
+<h2>Create your sample bookmarklet now</h2>
+<h3>Writing the Javascript</h3>
+<blockquote>
+<p>function() {</p>
+<p>// This a function that</p>
+<p>var el = document.createElement("div");</p>
+<p>el.id= "dont-remove-me";</p>
+<p>}();</p>
+</blockquote>
+    </div>
 </div>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://akashcodes.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             <br/><br/><br/><br/><br/><br/>
         </div>
         <div class="footer">

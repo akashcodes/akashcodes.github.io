@@ -11,8 +11,8 @@
     Posts of Category: {{ category }}
     {% for article in articles if category == article.category %}
         <div class="article-link">
-            <a class="comment-count" href="/{{ article.slug }}.html#disqus_thread" disabled></a>
-            <h3 class="share-tech-font"><a href="/{{ article.slug }}.html">{{ article.title }}</a></h3>
+            <a class="comment-count" href="/{{ article.url }}#disqus_thread" disabled></a>
+            <h3 class="share-tech-font"><a href="/{{ article.url }}">{{ article.title }}</a></h3>
             <label>Posted on <strong>{{ article.date|strftime('%d %B %Y') }}</strong></label>
             {{ article.summary }}
         </div>

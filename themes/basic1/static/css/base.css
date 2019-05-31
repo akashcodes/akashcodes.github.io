@@ -5,6 +5,10 @@
     font-family: 'Space Mono', monospace;
 }
 
+a {
+    color: #3498db;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;

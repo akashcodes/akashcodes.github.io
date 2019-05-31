@@ -1,0 +1,25 @@
+blockquote {
+    position: relative;
+    background-color: #bdc3c7;
+    max-width: fit-content;
+    padding: 6px 15px 6px 15px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.9em;
+}
+
+blockquote::before {
+    content: " ";
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: #1abc9c;
+}
+
+code {
+    background-color: #e2e8ec;
+    color: #e74c3c;
+    padding: 0px 3px 0px 3px;
+    border-radius: 2px;
+}

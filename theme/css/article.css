@@ -1,3 +1,18 @@
+
+
+.article-cont {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.article-meta {
+    color: #555555;
+}
+
+img {
+    max-width: 100%;
+}
+
 blockquote {
     position: relative;
     background-color: #bdc3c7;

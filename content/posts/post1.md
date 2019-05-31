@@ -24,7 +24,7 @@ Okay! Okay! Okay! You may not be interested in my story so let's jump to the mai
 
 &nbsp;
 
-<img alt="Pelican" src='https://media.giphy.com/media/xUA7aX3WnLn91k2DeM/giphy.gif' style="display: block; margin-left:auto; margin-right:auto; width: 600px;" />
+<img alt="Pelican" src='https://media.giphy.com/media/xUA7aX3WnLn91k2DeM/giphy.gif' style="display: block; margin-left:auto; margin-right:auto; width: auto;" />
 
 &nbsp; 
 

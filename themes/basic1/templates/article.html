@@ -8,13 +8,12 @@
 <div class="article-cont">
     <h1>{{ article.title }}</h1>
     <br/>
-    <label class="article-date">
+    <label class="article-meta">
         Posted on <strong>{{ article.date|strftime('%d %B %Y') }}</strong> in 
         <a href="/{{article.category.url}}">{{article.category}}</a>
-    </label>
-    <p>
+        <br/>
         Tags: {% for tag in article.tags %} <a href="/{{tag.url}}">{{tag}}</a> {% endfor %}
-    </p>
+    </label>
     <br/><br/>
     <div class="article-content">
             {{ article.content }}

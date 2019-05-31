@@ -50,6 +50,7 @@ ARTICLE_URL = '{category}/{date:%Y}/{date:%B}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = '{category}/{date:%Y}/{date:%B}/{date:%d}/{slug}/index.html'
 
 
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None

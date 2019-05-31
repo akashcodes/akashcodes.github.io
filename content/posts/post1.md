@@ -84,3 +84,10 @@ Here: __slug__ is the name of your html file generated, __pelican-python.html__ 
 
 &nbsp;
 
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+### To be continued...

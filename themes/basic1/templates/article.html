@@ -10,10 +10,10 @@
     <br/>
     <label class="article-date">
         Posted on <strong>{{ article.date|strftime('%d %B %Y') }}</strong> in 
-        <a href="{{article.category.url}}">{{article.category}}</a>
+        <a href="./{{article.category.url}}">{{article.category}}</a>
     </label>
     <p>
-        Tags: {% for tag in article.tags %} <a href="{{tag.url}}">{{tag}}</a> {% endfor %}
+        Tags: {% for tag in article.tags %} <a href="./{{tag.url}}">{{tag}}</a> {% endfor %}
     </p>
     <br/><br/>
     <div class="article-content">

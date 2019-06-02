@@ -54,7 +54,7 @@ Type `make` in the terminal to see the commands you can use to run development s
 
 &nbsp;
 
-Use `make devserver` command to launch development server on port 8000 (default). After launching the devserver, check out the website at __*localhost:8000*__. It uses default theme for the site, you can [create]() your own theme, or you use [this site's theme]() if you want.
+Use `make devserver` command to launch development server on port 8000 (default). After launching the devserver, check out the website at __*localhost:8000*__. It uses default theme for the site, you can [create](http://docs.getpelican.com/en/3.6.3/themes.html) your own theme, or you use [this site's theme](https://github.com/akashcodes/pelican-themes) if you want.
 
 &nbsp;
 
@@ -84,8 +84,60 @@ Here: __slug__ is the name of your html file generated, __pelican-python.html__ 
 
 &nbsp;
 
+Okay! Now let's make some changes to __pelicanconf.py__.
+
+&nbsp;
+
+<pre><code class="python"># Add following to your pelicanconf.py
+# Default date format to use: Eg: (%d %B %Y) => 28 May 2019
+DEFAULT_DATE_FORMAT = '%d %B %Y'
+
+# Current year. might be useful
+CURRENT_YEAR = time.strftime("%Y")
+
+# Path to theme to be used. I've named my theme basic1
+THEME = "themes/basic1"
+
+# List of templates that are used directly to render content. 
+# Typically direct templates are used to generate index pages for collections of content 
+# (e.g., tags and category index pages). If the tag and category collections are not needed, 
+# set DIRECT_TEMPLATES = ('index', 'archives')
+# I've add 'blog' here to create a separate page for blog indexing
+DIRECT_TEMPLATES = ['index','archives','categories', 'tags', 'blog']
+
+# Auto generate slug from this title, if not specified [Overridden by the Slug: property]
+SLUGIFY_SOURCE = 'title'
+
+# How URLs will be created for a blog post. eg - {root}/category/year/month/date/{slug}
+ARTICLE_URL = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+
+# How/where to generate HTML file for the blog post. eg - {root}/category/year/month/date/{slug}
+ARTICLE_SAVE_AS = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+</code></pre>
+
+&nbsp;
+
+Now create `blog.html` in __themes/{theme_name}/templates__. This is where you blogs will be indexed. Now you can remove blog indexing from `index.html`, and make it your landing page. Blogs can now accessed from __SITE_URL/blog/__. You can refer to theme files for [this website's theme]() to see how I did it.
+
+&nbsp;
+
+Okay! So now we need to publish our site. We'll use Github Pages and Netlify so host our site. [Rasor's Tech Blog has a nice article](https://rasor.github.io/using-pelican-blog-on-github-pages.html) on how to publish your blog on Github Pages. After you're done with that, we'll link our github pages repository to Netlify. 
+
+&nbsp;
+
+Publishing on Netlify is pretty simple. Signup on Netlify using your Github account and follow the steps. When asked which repository you want to use to serve the pages, select the repository for your blog. __Note:__ if you followed steps from Rasor's Tech Blog article, then when selecting the branch to publish use the __pelican branch__ (or whatever you named it). Done! Netlify will generate a link to your website, and your website must also be published at __username.github.io__ (again if you followed Rasor's Tech Blog). __To use your custom domain:__ It's pretty easy on Netlify. Just follow this link - [Netlify - Custom Domains](https://www.netlify.com/docs/custom-domains/).
+
+&nbsp;
+
+So, that's it. I hope you liked this post. If I made any mistakes, please let me know in the comments below. Also, if you have any queries, feel free to ask. Have a great day!
+
+&nbsp;
+
 &nbsp;
 
 &nbsp;
 
-### To be continued...
+&nbsp;
+
+&nbsp;
+

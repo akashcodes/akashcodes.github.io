@@ -18,6 +18,12 @@
     <link rel="shortcut icon" href="/theme/images/favicon.ico" />
     <link type="text/css" rel="stylesheet" href="/theme/css/base.css" />
 
+    <!-- Highlight js -->
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
     <!-- font-family: 'VT323' -->
     <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
 
@@ -104,11 +110,12 @@
 <p>&nbsp; </p>
 <p><img alt="Pelican" src='https://media.giphy.com/media/xUA7aX3WnLn91k2DeM/giphy.gif' style="display: block; margin-left:auto; margin-right:auto; width: auto;" /></p>
 <p>&nbsp; </p>
-<p>Assuming you have Python3 and pip installed, start by downloading and installing <strong>Pelican</strong>. Hit up the console and type</p>
+<p>Assuming you have Python3 and pip installed, start by downloading and installing <strong>Pelican</strong>. Hit up the console and run:</p>
 <p>&nbsp;</p>
-<blockquote>
-<p>pip install pelican</p>
-</blockquote>
+<pre><code class="bash para"># download pelican library
+pip install pelican
+</code></pre>
+
 <p>&nbsp;</p>
 <h6>Note: it's good to use virtual environments but that's for you to decide.</h6>
 <p>&nbsp;</p>

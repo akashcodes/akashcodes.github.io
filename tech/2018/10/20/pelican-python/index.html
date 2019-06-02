@@ -127,7 +127,7 @@ pip install pelican
 <p>&nbsp;</p>
 <p><img alt="pelican make commands" src='https://i.imgur.com/r5Sy9HQ.png' style="display: block; margin-left:auto; margin-right:auto; max-width: 90%;" /></p>
 <p>&nbsp;</p>
-<p>Use <code>make devserver</code> command to launch development server on port 8000 (default). After launching the devserver, check out the website at <strong><em>localhost:8000</em></strong>. It uses default theme for the site, you can <a href="">create</a> your own theme, or you use <a href="">this site's theme</a> if you want.</p>
+<p>Use <code>make devserver</code> command to launch development server on port 8000 (default). After launching the devserver, check out the website at <strong><em>localhost:8000</em></strong>. It uses default theme for the site, you can <a href="http://docs.getpelican.com/en/3.6.3/themes.html">create</a> your own theme, or you use <a href="https://github.com/akashcodes/pelican-themes">this site's theme</a> if you want.</p>
 <p>&nbsp;</p>
 <p><img alt="pelican demo on localhost:8000" src='https://i.imgur.com/mqI6FnV.png' style="display: block; margin-left:auto; margin-right:auto; max-width: 90%;" /></p>
 <p>&nbsp;</p>
@@ -158,16 +158,32 @@ THEME = "themes/basic1"
 # Typically direct templates are used to generate index pages for collections of content 
 # (e.g., tags and category index pages). If the tag and category collections are not needed, 
 # set DIRECT_TEMPLATES = ('index', 'archives')
-# TODO: Add 'error' below after creating error.html
+# I've add 'blog' here to create a separate page for blog indexing
 DIRECT_TEMPLATES = ['index','archives','categories', 'tags', 'blog']
 
 # Auto generate slug from this title, if not specified [Overridden by the Slug: property]
 SLUGIFY_SOURCE = 'title'
 
-# How URLs will be created for a blog. eg - {root}/tech/2018/
-ARTICLE_URL = '{category}/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS = '{category}/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
+# How URLs will be created for a blog post. eg - {root}/category/year/month/date/{slug}
+ARTICLE_URL = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+
+# How/where to generate HTML file for the blog post. eg - {root}/category/year/month/date/{slug}
+ARTICLE_SAVE_AS = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 </code></pre>
+
+<p>&nbsp;</p>
+<p>Now create <code>blog.html</code> in <strong>themes/{theme_name}/templates</strong>. This is where you blogs will be indexed. Now you can remove blog indexing from <code>index.html</code>, and make it your landing page. Blogs can now accessed from <strong>SITE_URL/blog/</strong>. You can refer to theme files for <a href="">this website's theme</a> to see how I did it.</p>
+<p>&nbsp;</p>
+<p>Okay! So now we need to publish our site. We'll use Github Pages and Netlify so host our site. <a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html">Rasor's Tech Blog has a nice article</a> on how to publish your blog on Github Pages. After you're done with that, we'll link our github pages repository to Netlify. </p>
+<p>&nbsp;</p>
+<p>Publishing on Netlify is pretty simple. Signup on Netlify using your Github account and follow the steps. When asked which repository you want to use to serve the pages, select the repository for your blog. <strong>Note:</strong> if you followed steps from Rasor's Tech Blog article, then when selecting the branch to publish use the <strong>pelican branch</strong> (or whatever you named it). Done! Netlify will generate a link to your website, and your website must also be published at <strong>username.github.io</strong> (again if you followed Rasor's Tech Blog). <strong>To use your custom domain:</strong> It's pretty easy on Netlify. Just follow this link - <a href="https://www.netlify.com/docs/custom-domains/">Netlify - Custom Domains</a>.</p>
+<p>&nbsp;</p>
+<p>So, that's it. I hope you liked this post. If I made any mistakes, please let me know in the comments below. Also, if you have any queries, feel free to ask. Have a great day!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
     </div>
 </div>
 <div id="disqus_thread"></div>

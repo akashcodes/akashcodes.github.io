@@ -2,7 +2,7 @@ title: Setting up a static blog with Pelican and Netlify
 slug: pelican-python
 category: tech
 tags: web, javascript, programming, web_development, python, pelican
-date: 2019-05-26
+date: 2018-10-20
 modified: 2018-10-20
 summary: Creating a static site with Pelican on Python
 

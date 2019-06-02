@@ -13,6 +13,7 @@ img {
     max-width: 100%;
 }
 
+/*
 blockquote {
     position: relative;
     background-color: #bdc3c7;
@@ -37,4 +38,29 @@ code {
     color: #e74c3c;
     padding: 0px 3px 0px 3px;
     border-radius: 2px;
+}
+*/
+
+
+
+code {
+    position: relative;
+
+    background-color: #F0F0F0;
+    padding: 6px 15px 6px 15px;
+    font-size: 0.9em;
+}
+
+code.para::before {
+    content: " " !important;
+    position: absolute !important;
+    width: 2px !important;
+    height: 100% !important;
+    top: 0px !important;
+    left: 0px !important;
+    background-color: #1abc9c !important;
+}
+
+code:not(.para) {
+    color: #e74c3c !important;
 }

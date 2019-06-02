@@ -24,11 +24,13 @@ So... I finally decided to set-up my own blog using Pelican. Before this, I had 
 
 &nbsp; 
 
-Assuming you have Python3 and pip installed, start by downloading and installing __Pelican__. Hit up the console and type
+Assuming you have Python3 and pip installed, start by downloading and installing __Pelican__. Hit up the console and run:
 
 &nbsp;
 
->pip install pelican
+<pre><code class="bash para"># download pelican library
+pip install pelican
+</code></pre>
 
 &nbsp;
 

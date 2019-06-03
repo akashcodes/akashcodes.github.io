@@ -51,7 +51,9 @@ a {
     }
     
     .header {
+        position: relative;
         margin-bottom: 40px;
+        z-index: 999;
     }
     
     .nav-buttons {

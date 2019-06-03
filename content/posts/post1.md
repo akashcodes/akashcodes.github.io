@@ -3,7 +3,7 @@ slug: pelican-python
 category: tech
 tags: web, javascript, programming, web_development, python, pelican
 date: 2018-10-20
-modified: 2018-10-20
+modified: 2019-05-27
 summary: Creating a static site with Pelican on Python
 
 

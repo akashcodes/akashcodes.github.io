@@ -117,7 +117,7 @@ ARTICLE_SAVE_AS = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 &nbsp;
 
-Now create `blog.html` in __themes/{theme_name}/templates__. This is where you blogs will be indexed. Now you can remove blog indexing from `index.html`, and make it your landing page. Blogs can now accessed from __SITE_URL/blog/__. You can refer to theme files for [this website's theme]() to see how I did it.
+Now create `blog.html` in __themes/{theme_name}/templates__. This is where you blogs will be indexed. Now you can remove blog indexing from `index.html`, and make it your landing page. Blogs can now accessed from __SITE_URL/blog/__. You can refer to theme files for [this website's theme](https://github.com/akashcodes/pelican-themes) to see how I did it.
 
 &nbsp;
 
@@ -129,7 +129,7 @@ Publishing on Netlify is pretty simple. Signup on Netlify using your Github acco
 
 &nbsp;
 
-So, that's it. I hope you liked this post. If I made any mistakes, please let me know in the comments below. Also, if you have any queries, feel free to ask. Have a great day!
+So, that's it. I hope you liked this post. If I got something wrong, please let me know in the comments below. Also, if you have any thoughts, feel free to share. Have a great day!
 
 &nbsp;
 

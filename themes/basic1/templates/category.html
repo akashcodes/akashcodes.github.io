@@ -9,7 +9,8 @@
 {% block content %}
 <h2>Posts of Category: {{ category }}</h2>
 <div class="article-link-cont">
-    {% for article in articles if category == article.category %}
+    {% for article in articles|sort(attribute='date') if category == article.category %}
+        {% if 'project' != article.category %}
         <div class="article-cont">
             <h3 class="share-tech-font"><a class="article-link" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
             <label class="article-date">Posted on <strong>{{ article.date|strftime('%d %B %Y') }}</strong></label> <span class="bar">|&nbsp;</span>
@@ -18,6 +19,7 @@
                 {{ article.summary }}
             </div>
         </div>
+        {% endif %}
     {% else %}
     No posts yet!
     {% endfor %}

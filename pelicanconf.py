@@ -28,7 +28,7 @@ THEME = "themes/basic1"
 # (e.g., tags and category index pages). If the tag and category collections are not needed, 
 # set DIRECT_TEMPLATES = ('index', 'archives')
 # TODO: Add 'error' below after creating error.html
-DIRECT_TEMPLATES = ['index','archives','categories', 'tags', 'blog']
+DIRECT_TEMPLATES = ['index','projects','categories', 'tags', 'blog']
 
 
 # Auto generate slug from this source. Overridden by the Slug: property

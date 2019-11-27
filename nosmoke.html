@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>akash codes - Articles by Akash Mishra</title>
+    <title>akash codes</title>
     <link rel="shortcut icon" href="/theme/images/favicon.ico" />
     <link type="text/css" rel="stylesheet" href="/theme/css/base.css" />
 
@@ -95,49 +95,64 @@
          </div>
         <div class="body">
 <p class="title-text">
-    <span class="name-text">Akash Mishra</span>
+    <span style="font-size: 30px;" class="name-text">My No Smoking Counter</span>
     <br/>
-    <span class="one-liner-text">Grad student at IIT Madras</span>
+    <span class="one-liner-text">Maybe a motivation to quit</span>
     <br/><br/>
-    <p  style="text-align: center;">
-        <a href="https://github.com/akashcodes">Github</a>
-        &nbsp;|
-        <a href="https://linkedin.com/in/mishraakash">LinkedIn</a>
-        &nbsp;|
-        <a href="https://twitter.com/akascchan">Twitter</a>
-    </p>
     <br/><br/>
     <p class="para-text para-1-text">
-            Hi! I am a Computer Science grad student at IIT Madras. 
-            
             <br/><br/><br/>
-            Currently I'm taking the following courses in my first semester - 
+            Haven't smoked since:
+            <br/>
+            <span id="smoke-seconds"></span> <b>seconds</b>
             <br/></br>
-            <a href="https://sites.google.com/view/arun-rajkumar/teaching/pattern-recognition-and-machine-learning-cs5691">CS5691</a> - Pattern Recognition and Machine Learning
-
-            <br/></br>
-            <a href="https://yaduvasudev.github.io/courses/5800/19/">CS5800</a> - Advanced Data Structures and Algorithms
-
-            <br/></br>
-            <a href="http://www.cse.iitm.ac.in/~prashla/cs6015_2019.html">CS6015</a> - Linear Algebra and Random Processes
-
-            <br/></br>
-            <a href="https://www.cse.iitm.ac.in/course_details.php?arg=NzE=">CS6140</a> - Advanced Programming Lab
-               
-            <br/></br>
-            <a href="https://www.cse.iitm.ac.in/course_details.php?arg=NTk=">CS6380</a> - Artificial Intelligence
-            
-            <br/><br/><br/>
-            I'm also a Teaching Assistant for <b><a href="https://www.cse.iitm.ac.in/~krishna/cs3300/">CS3300</a> - Compiler Design</b>
-            <br/><br/>
-            In my spare time , I love to watch animes and play Rocket League [let's play a game sometime ;)].
-            <br/><br/>
-            You can reach me at: <b>akashdotcodes [at] gmail [dot] com</b>
-            <br/><br/>
-            <b>Checkout my CV <a href="/theme/resume.pdf">here</a></b>.
-            <br/><br/>
     </p>
 </p>
+<script>
+    var getJSON = function(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = 'json';
+        xhr.onload = function() {
+            var status = xhr.status;
+            if(status == 200) {
+                callback(null, xhr.response);
+            } else {
+                callback(status, xhr.response);
+            }
+        };
+        xhr.send();
+    };
+    var smokeSecondsElement = document.getElementById("smoke-seconds");
+
+    var jsonURL = "/theme/js/smoke.json";
+    var years, months, days, hours, minutes, seconds;
+
+
+
+    getJSON(jsonURL, function(err, data) {
+        if (err !== null) {
+            alert('Something went wrong: ' + err);
+        } else {
+            var yyyy = data['year'];
+            var mm = data['month']-1;
+            var dd = data['day'];
+            var hh = data['hour'];
+            var m = data['minute'];
+            var ss = data['second'];
+
+            var dateLast = new Date(yyyy, mm, dd, hh, m, ss);
+            dateLast = new Date(dateLast*1 + (5.5*3600*1000));
+
+            window.setInterval(function() {
+                var dateNow = new Date(Date.now());// + (5.5*3600*1000));
+                var sec = Math.floor((dateNow - dateLast)/1000);
+                smokeSecondsElement.innerText = sec;
+            }, 1000);
+        }
+    });
+
+</script>
             <br/><br/><br/><br/><br/><br/>
         </div>
         <div class="footer">

@@ -4,10 +4,10 @@ category: tech
 tags: high_performance_computing, pbs
 date: 2020-08-25
 modified: 2020-08-25
-summary: A teeny-tiny guide on PBS (Pro Job Scheduler)
+summary: A teeny-tiny guide on PBS (Portable Batch System)
 
 
-Pro Job Scheduler (PBS) is a computer software that performs job scheduling, and workload management in High-Performance Computing (HPC) environments - clusters, supercomputers, etc.
+Portable Batch System (PBS) is a computer software that performs job scheduling, and workload management in High-Performance Computing (HPC) environments - clusters, supercomputers, etc.
 
 <br/>
 

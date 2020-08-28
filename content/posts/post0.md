@@ -1,4 +1,4 @@
-title: A teeny-tiny guide on PBS (Pro Job Scheduler)
+title: A teeny-tiny guide on PBS (Portable Batch System)
 slug: pbs-introduction
 category: tech
 tags: high_performance_computing, pbs
